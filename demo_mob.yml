@@ -1,0 +1,31 @@
+poop_man:
+  Type: ZOMBIE
+  Display: 'うんこマン'
+  Health: 10
+  Damage: 20
+  Armor: 10
+  KillMessages:
+  - '<target.name><&sq>はうんこまみれになった！！'
+  Options:
+    KnockbackResistance: 
+    MovementSpeed: 
+    PrevetItemPickup: false
+    PreventOtherDrops: true
+    DigOutOfGround: true
+  Drops:
+  - 
+  Skills:
+  - model{tint=true;mid=ここにMODELのファイル名;n=false} @self ~onSpawn
+  - skill{s=ここにスキルの名前;sync=true} ~onTimer:98.6
+  - skill{s=;sync=true} @self ~onTimer 0.2
+  DamageModifiers:
+  - FALL 1
+  - PROJECTILE 5
+  - FIRE_TICK 0
+  - MAGIC 2
+  BossBar:
+    Enabled: true
+    Range: 30
+    Style: SOLID
+    Color: BLUE
+    Title: 'うんこマン'
