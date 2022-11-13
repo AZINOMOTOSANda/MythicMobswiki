@@ -1,0 +1,45 @@
+#あじのもとだよ。つくったよ。ばぐだらけあ￥ｄさひｖだｈんｋｊぁｄｈんｌｓｋｊｂｌｋｊｖｂｋｊぁｌｂｋｊｌｂｄｋｊｌｋｊｆｂｋｖｊぁｋｊｄんｋｖｌｋｌｋｌ；ｄｋんｌ；ｋ
+
+
+enchant_master:
+    Type: ZOMBIE
+    Display: '&6激ウザ&bマン &4&lデバフ魔人'
+    Health: 5000
+    Damage: 0  
+    Armor: 5
+    KillMessages:
+    - '<target.name> &b雪の花&r&fの前に&c砕け&r散った'
+    - '<target.name><&sq>は&6激ウザ&bマン &4&lデバフ魔人&rの餌食にされた'
+    Options:
+      KnockbackResistance: 50
+      MovementSpeed: 0.1
+      PrevetItemPickup: false
+      PreventOtherDrops: true
+      DigOutOfGround: true
+    Drops:
+    - 
+    Skills:
+    - skill{s=enchant_SkillsRoulette;sync=true} ~onTimer:100
+    - skill{s=lost_enchant;sync=true} @self ~onTimer 0.2
+    - skill{s=fire_enchant;sync=true} @self ~onTimer 0.3
+    - skill{s=enchant_magic;sync=true} @self ~onTimer 0.4
+    - skill{s=enchant_magic_2;sync=true} @self ~onTimer 0.5
+    - skill{s=enchant_magic_4;sync=true} @self ~onTimer 0.7
+    - skill{s=enchant_magic_5;sync=true} @self ~onTimer 0.8
+    - skill{s=enchant_magic_6;sync=true} @self ~onTimer 0.9
+    - skill{s=enchant_magic_7;sync=true} @self ~onTimer 1.0
+    - skill{s=enchant_magic_8;sync=true} @self ~onTimer 1.1
+    - skill{s=enchant_magic_9;sync=true} @self ~onTimer 1.2
+    - skill{s=enchant_magic_10;sync=true} @self ~onTimer 1.3
+    - skill{s=enchant_magic_11;sync=true} @self ~onTimer 1.4
+    DamageModifiers:
+    - FALL 0
+    - PROJECTILE 0
+    - FIRE_TICK 0
+    - MAGIC 0
+    BossBar:
+      Enabled: true
+      Range: 30
+      Style: SOLID
+      Color: RED
+      Title: '&6激ウザ&bマン &4&lデバフ魔人'

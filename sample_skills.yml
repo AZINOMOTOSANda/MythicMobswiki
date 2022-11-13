@@ -1,0 +1,177 @@
+#あじのもとです。これ作りました(^^
+
+
+enchant_SkillsRoulette:
+  Skills:
+  - randomskill{skills=lost_enchant,fire_enchant,enchant_magic,enchant_magic_2,enchant_magic_3,enchant_magic_4,enchant_magic_5,enchant_magic_6,enchant_magic_7,enchant_magic_11,enchant_magic_8,enchant_magic_9,enchant_magic_10;sync=true} @self
+
+lost_enchant:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particlesphere{particle=enchantment_table;amount=2000;radius=5;y=1} @self
+  - delay 50
+  - explosion{yield=1;y=0.0004} @PIR{r=5} 
+  - effect:explosion @PIR{r=5} 
+  - delay 50
+  - removetag{t=skillRunning} @self
+
+fire_enchant:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particlesphere{particle=reddust;c=#E9E3C8;amount=2000;Size=5;radius=5} @self
+  - effect:particlesphere{particle=reddust;c=#D60000;amount=2000;Size=5;radius=5} @self
+  - effect:particlesphere{particle=reddust;c=#FF8242;amount=2000;Size=5;radius=5} @self
+  - ignite{ticks=100} @PIR{r=5} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=SLOW;duration=200;level=10;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_2:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=SLOW_DIGGING;duration=200;level=10;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_3:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=WEAKNESS;duration=200;level=10;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_4:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=CONFUSION;duration=1000;level=10;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_5:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=JUMP;duration=200;level=100;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_6:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=BLINDNESS;duration=1000;level=100;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_7:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=HUNGER;duration=200;level=100;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_11:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=POISON;duration=200;level=7;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_8:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=WITHER;duration=200;level=5;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_9:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=LEVITATION;duration=200;level=5;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
+
+enchant_magic_10:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - effect:particletornado{p=enchantment_table;size;cp=largeexplode;mr=10;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=20;chs=5;cvs=5;cps=1;cyo=1} @self ~onTimer:100
+  - delay 60
+  - potion{type=SPEED;duration=200;level=50;hasParticles=true} @PIR{r=10} 
+  - delay 60
+  - removetag{t=skillRunning} @self
