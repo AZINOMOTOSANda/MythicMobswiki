@@ -1,0 +1,189 @@
+sample_boss_SkillsRoulette:
+  Skills:
+  - randomskill{skills=FrozenShot,FrozenShock,winter_come,Thunder;sync=true} @self
+
+FrozenShock:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  - health{h=>200} true @self
+  Skills:
+  - addtag{t=skillRunning} @self
+  - randommessage{
+      m=
+      &fボス：&c炎&bをも凍らせる地獄の冷気よ&f、この&6愚か者&fどもを&b凍て&fつかせろ!&d&lフローズンショック!
+      } @PIR{r=50} ~onInteract   
+  - delay 22
+  - damage{amount=16;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - effect:particles{particle=reddust;color=#C0FFEE;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}
+  - delay 60
+  - heal{amount=50;overheal=false} @self ~onTimer 0.05
+  - delay 200
+  - removetag{t=skillRunning} @self
+
+FrozenShot:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false 
+  - health{h=>200} true @self
+  Skills:
+  - addtag{t=skillRunning} @self
+  - randommessage{
+      m=
+      &fボス：&9凍てつく槍よ&f、我が主に仇なす&6愚か者&fを貫きたまえ！&c&lフローズンショット！
+      } @PIR{r=50} ~onInteract    
+  - delay 20
+  - damage{amount=18;ignoreArmor=true} @target ~onTimer:20
+  - effect:particleline{particle=reddust;c=#00ECFF;amount=20;fromOrigin=false;syo=1} @target
+  - delay 60
+  - heal{amount=50;overheal=false} @self ~onTimer 0.05
+  - delay 200
+  - removetag{t=skillRunning} @self
+
+winter_come:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  - health{h=<199} true
+  Skills:
+  - addtag{t=skillRunning} @self
+  - randommessage{
+      m=
+      &fBoss：&9冬が訪れるわね...
+      } @PIR{r=50} ~onInteract    
+  - delay 60
+    - randommessage{
+      m=
+      &fBoss：&9フフフ...
+      } @PIR{r=50} ~onInteract   
+  - delay 60
+    - delay 60
+    - randommessage{
+      m=
+      &fBoss：&9雪が綺麗ね...
+      } @PIR{r=50} ~onInteract   
+  - randommessage{
+      m=
+      &fBoss：&9ゆっくりしていって頂戴...
+      } @PIR{r=50} ~onInteract     
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9そんな時間はない？
+      } @PIR{r=50} ~onInteract     
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9それは残念ね...
+      } @PIR{r=50} ~onInteract     
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9じゃあ、今すぐ死になさい！！
+      } @PIR{r=50} ~onInteract    
+  - delay 60
+  - damage{amount=5;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - effect:particles{particle=reddust;color=#C0FFEE;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9あら、意外と頑丈なのね...
+      } @PIR{r=50} ~onInteract     
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9ならこれはどうかしら？
+      } @PIR{r=50} ~onInteract   
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&c雪月商！
+      } @PIR{r=50} ~onInteract 
+  - delay 60
+  - effect:particles{particle=reddust;color=#C0FFEE;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}
+  - effect:particles{particle=reddust;color=#B00B13;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:particles{particle=reddust;color=#000000;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:particles{particle=reddust;color=#F4F4EA;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - damage{amount=19;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 60
+  - heal{amount=200;overheal=true} @self ~onTimer 1
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9へぇ...
+      } @PIR{r=50} ~onInteract   
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9いいわ、ここを通りなさい。
+      } @PIR{r=50} ~onInteract 
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9ただし。
+      } @PIR{r=50} ~onInteract 
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9これを耐えたらね♪
+      } @PIR{r=50} ~onInteract 
+  - delay 60
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - effect:particles{particle=reddust;color=#C0FFEE;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}
+  - effect:lightning @PIR{r=50}
+  - delay 10
+  - effect:particles{particle=reddust;color=#B00B13;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:lightning @PIR{r=50}
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 10
+  - effect:particles{particle=reddust;color=#B00B13;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:lightning @PIR{r=50}
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 10
+  - effect:particles{particle=reddust;color=#B00B13;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:lightning @PIR{r=50}
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 10
+  - effect:particles{particle=reddust;color=#B00B13;hs=3;vs=2;Size=1;a=3000;s=0.01} @PIR{r=50}  
+  - effect:lightning @PIR{r=50}
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 10
+  - randommessage{
+      m=
+      &fBoss：&9やるじゃない...
+      } @PIR{r=50} ~onInteract 
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&9いきなさい...
+      } @PIR{r=50} ~onInteract 
+  - delay 20
+  - damage{amount=900;ignoreArmor=true} @self ~onTimer:20
+  - delay 20
+
+Thunder:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=skillRunning} false
+  - health{h=>200} true
+  Skills:
+  - addtag{t=skillRunning} @self
+  - delay 60
+  - randommessage{
+      m=
+      &fBoss：&b轟く雷鳴！&6ライトニングサンダー！
+      } @PIR{r=50} ~onInteract    
+  - delay 60
+  - effect:lightning @PIR{r=50}
+  - damage{amount=5;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 20
+  - effect:lightning @PIR{r=50}
+  - damage{amount=5;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 20
+  - effect:lightning @PIR{r=50}
+  - damage{amount=5;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 20
+  - effect:lightning @PIR{r=50}
+  - damage{amount=4;ignoreArmor=true} @PIR{r=50} ~onTimer:20
+  - delay 200
+  - removetag{t=skillRunning} @self

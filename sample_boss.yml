@@ -1,0 +1,36 @@
+#毎度恒例あじのもとです。バグり散らかしてました。キレそう
+
+sekka_maid:
+  Type: HUSK
+  Display: '&f&lsample'
+  Health: 200
+  Damage: 0  
+  Armor: 10
+  KillMessages:
+  - '<target.name><&sq>はbossにやられた'
+  Options:
+    KnockbackResistance: 50
+    MovementSpeed: 0.1
+    PrevetItemPickup: false
+    PreventOtherDrops: true
+    DigOutOfGround: true
+  Drops:
+  - 
+  Skills:
+  - model{tint=true;mid=sekka_maid;n=false} @self ~onSpawn
+  - skill{s=sekka_maid_SkillsRoulette;sync=true} ~onTimer:98.6
+  - skill{s=FrozenShock;sync=true} @self ~onTimer 0.2
+  - skill{s=FrozenShot;sync=true} @self ~onTimer 0.3
+  - skill{s=winter_come;sync=true} @self ~onTimer 0.4
+  - skill{s=Thunder;sync=true} @self ~onTimer 0.5
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 2
+  - FIRE_TICK 0
+  - MAGIC 2
+  BossBar:
+    Enabled: true
+    Range: 30
+    Style: SOLID
+    Color: BLUE
+    Title: '&bboss'
